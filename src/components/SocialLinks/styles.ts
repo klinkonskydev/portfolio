@@ -27,10 +27,12 @@ export const Link = styled.a`
     }
 
     &:hover,
-    svg:hover,
-    &:focus,
-    svg:focus {
+    &:focus {
       color: ${theme.colors.ruby};
+
+      svg {
+        color: ${theme.colors.ruby};
+      }
     }
   `}
 `
