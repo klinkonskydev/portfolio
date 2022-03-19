@@ -6,9 +6,13 @@ export const Wrapper = styled.div`
   gap: 1.7rem;
 
   ${media.lessThan('medium')`
+    align-items: flex-start;
+    justify-content: flex-start;
+  `}
+
+  ${media.lessThan('small')`
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   `}
 `
 
