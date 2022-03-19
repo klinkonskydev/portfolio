@@ -1,14 +1,16 @@
-import { Grid } from 'components/Grid'
 import { Container } from 'components/Container'
-import Hero from 'components/Hero'
 import CardList from 'components/CardList'
+import { Grid } from 'components/Grid'
+import Hero from 'components/Hero'
+
+import cardItemsMock from 'components/Card/mock'
 
 export default function HomeTemplate() {
   return (
     <Container>
       <Grid>
         <Hero />
-        <CardList item={[]} />
+        <CardList items={cardItemsMock} />
       </Grid>
     </Container>
   )

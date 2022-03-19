@@ -1,18 +1,21 @@
 import Card, { CardProps } from 'components/Card'
+import { Link } from 'react-router-dom'
 
 import * as S from './styles'
 
 export type CardListProps = {
-  item: CardProps[]
+  items: CardProps[]
 }
 
-export default function CardList({ item }: CardListProps) {
+export default function CardList({ items }: CardListProps) {
   return (
     <S.Wrapper>
-      {item.map((card) => (
-        <li key={card.title}>
-          <Card {...card} />
-        </li>
+      {items.map((card, index) => (
+        <S.List key={`list-${index}`}>
+          <Link to={card.href}>
+            <Card {...card} />
+          </Link>
+        </S.List>
       ))}
     </S.Wrapper>
   )

@@ -13,7 +13,6 @@ export const Header = styled.header`
   ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
   `}
 `
 
@@ -26,11 +25,14 @@ export const Heading = styled.h1`
       color: ${theme.colors.gray};
     }
 
+    span:first-child {
+      color: ${theme.colors.ruby};
+    }
+
     word-wrap: break-word;
 
     ${media.lessThan('medium')`
       font-size: 2.6rem;
-      text-align: center;
     `}
   `}
 `
@@ -41,8 +43,9 @@ export const Subtitle = styled.h2`
 
   ${media.lessThan('medium')`
     font-size: 1.8rem;
+    align-self: start;
     order: -1;
-    margin-top: 2rem;
+    margin-top: 4rem;
   `}
 `
 
@@ -51,6 +54,7 @@ export const Social = styled.div`
   grid-column: 3/-1;
 
   ${media.lessThan('medium')`
-    width: fit-content;
+    width: 100%;
+    margin-bottom: 4rem;
   `}
 `
