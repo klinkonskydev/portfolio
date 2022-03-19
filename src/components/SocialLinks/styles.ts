@@ -21,18 +21,11 @@ export const Link = styled.a`
     color: ${theme.colors.gray};
     text-decoration: none;
 
-    &,
-    svg {
-      transition: color ${theme.transitions.fast};
-    }
+    transition: all ${theme.transitions.fast};
 
     &:hover,
     &:focus {
       color: ${theme.colors.ruby};
-
-      svg {
-        color: ${theme.colors.ruby};
-      }
     }
   `}
 `
