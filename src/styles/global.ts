@@ -43,6 +43,10 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      ::selection,
+      ::-moz-selection {
+        background: ${rgba(theme.colors.ruby, 0.6)};
+      }
     }
 
     html {
@@ -64,11 +68,6 @@ export const GlobalStyle = createGlobalStyle`
 
       font-size: 1.6rem;
       font-family: ${theme.fonts.family};
-    }
-
-    ::selection,
-    ::-moz-selection {
-      background: ${rgba(theme.colors.ruby, 0.6)};
     }
   `}
 `
