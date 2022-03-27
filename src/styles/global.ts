@@ -2,42 +2,6 @@ import { createGlobalStyle, css } from 'styled-components'
 import { rgba } from 'polished'
 
 export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: light;
-    font-weight: 300;
-    font-display: swap;
-    src: local(''),
-        url('./fonts/OpenSans-Light.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: regular;
-    font-weight: 400;
-    font-display: swap;
-    src: local(''),
-        url('./fonts/OpenSans-Regular.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: medium;
-    font-weight: 500;
-    font-display: swap;
-    src: local(''),
-        url('./fonts/OpenSans-Medium.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: bold;
-    font-weight: 700;
-    font-display: swap;
-    src: local(''),
-        url('./fonts/OpenSans-Bold.woff2') format('woff2');
-  }
-
   ${({ theme }) => css`
     * {
       margin: 0;
