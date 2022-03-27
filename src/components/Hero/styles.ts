@@ -1,5 +1,25 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import media from 'styled-media-query'
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-10rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`
+
+const slideInReverse = keyframes`
+  from {
+    transform: translateX(10rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`
 
 export const Header = styled.header`
   display: grid;
@@ -9,6 +29,7 @@ export const Header = styled.header`
   grid-column: 1/-1;
   gap: 2rem;
   padding: 0 2rem;
+  overflow: hidden;
 
   ${media.lessThan('medium')`
     display: flex;
@@ -21,6 +42,7 @@ export const Heading = styled.h1`
   ${({ theme }) => css`
     grid-column: 1/4;
     font-size: 3.2rem;
+    animation: ${slideIn} 900ms ease;
 
     span {
       color: ${theme.colors.gray};
@@ -30,7 +52,6 @@ export const Heading = styled.h1`
 
     ${media.lessThan('medium')`
       font-size: 2.6rem;
-      text-align: center;
     `}
   `}
 `
@@ -38,28 +59,30 @@ export const Heading = styled.h1`
 export const Subtitle = styled.h2`
   align-self: center;
   grid-column: 1/3;
+  animation: ${slideInReverse} 900ms ease;
 
   ${media.lessThan('medium')`
     font-size: 1.8rem;
     order: -1;
     margin-top: 2rem;
+    align-self: start;
   `}
 `
 
 export const Description = styled.p`
-  margin-top: 3rem;
   grid-column: 1/4;
 
-  text-align: start;
   font-size: 1.9rem;
-  line-height: 3rem;
+  animation: ${slideIn} 900ms ease;
 `
 
 export const Social = styled.div`
   align-self: center;
   grid-column: 3/-1;
+  animation: ${slideInReverse} 900ms ease;
 
   ${media.lessThan('medium')`
-    width: fit-content;
+    align-self: start;
+    margin: 2.4rem 0;
   `}
 `
