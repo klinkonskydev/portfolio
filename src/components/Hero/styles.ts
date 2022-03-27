@@ -46,6 +46,15 @@ export const Subtitle = styled.h2`
   `}
 `
 
+export const Description = styled.p`
+  margin-top: 3rem;
+  grid-column: 1/4;
+
+  text-align: start;
+  font-size: 1.9rem;
+  line-height: 3rem;
+`
+
 export const Social = styled.div`
   align-self: center;
   grid-column: 3/-1;
